@@ -1,0 +1,97 @@
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(74, 222, 128, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
+  }
+}
+
+@keyframes healing {
+  0% {
+    box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(249, 115, 22, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(249, 115, 22, 0);
+  }
+}
+
+@keyframes alert {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(3px);
+  }
+  50% {
+    transform: translateX(-3px);
+  }
+  75% {
+    transform: translateX(3px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes emergency {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.card-normal {
+  animation: pulse 2s infinite;
+}
+
+.card-healing {
+  animation: healing 1.5s infinite;
+}
+
+.card-alert {
+  animation: alert 0.5s infinite;
+}
+
+.card-emergency {
+  animation: emergency 0.8s infinite;
+}
+
+.repair-icon {
+  animation: spin 2s linear infinite;
+}
+
+.metric-gauge {
+  transition: all 1s ease-in-out;
+}
+
+/* Scrollbar styling */
+.diagnostics-feed::-webkit-scrollbar {
+  width: 6px;
+}
+
+.diagnostics-feed::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.diagnostics-feed::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 20px;
+}
